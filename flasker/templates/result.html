@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h3>Here are the results....</h3>
+<h4>Business Name:</h4>
+      <h4>{{ info[0].business_name }}</h4>
+
+    {% for bits in info %}
+        <h4>Product ID and Name:</h4>
+        <h5>{{ bits.sku_id }}</h5>
+        <h5>{{ bits.product_name }}</h5>
+        <h4>Reasons for Failure with the Comliance</h4>
+          <p>{{ bits.failure_reasons }}</p>
+      {% endfor %}
+
+{% endblock body %} 
